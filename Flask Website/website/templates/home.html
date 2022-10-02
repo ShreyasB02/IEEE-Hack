@@ -1,0 +1,105 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<br>
+<h1 align="center"> Tests</h1>
+<br>
+<style>
+  .card:hover{
+     transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
+}
+</style>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <!-- <li class="list-group-item">
+    {{ note.data }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </li> -->
+  {% endfor %}
+  
+  
+  <br>
+  <br>
+  <div class="card-deck">
+    
+    <a class="card" href="/blood" target="_blank" style="color:black ; text-decoration:none">
+      <div class="card-header">BLOOD TEST REPORTS</div>
+      <div class="text-white bg-info mb-3">
+  
+        <div class="card-body">
+          <p class="card-text">This card will redirect you to uplaod your blood test reports.</p>
+        </div>
+      </div>
+    </a>
+    <a class="card" href="/liver" target="_blank" style="color:black ; text-decoration:none">
+      <div class="card-header">LIVER REPORTS</div>
+      <div class="text-white bg-info mb-3">
+        
+        <div class="card-body">
+
+          <p class="card-text">This card will redirect you to view/access your Liver test reports.</p>
+        </div>
+      </div>
+    </a>
+    <a class="card" href="/heart" target="_blank" style="color:black; text-decoration:none">
+      <div class="card-header">HEART REPORTS</div>
+      <div class="text-white bg-info mb-3">
+        
+        <div class="card-body">
+
+          <p class="card-text">This card will have you to view your test reports related to heart .</p>
+        </div>
+      </div>
+    </a>
+    
+  </div>
+  <br>
+  <br>
+  <div class="card-deck">
+    
+    <a class="card" href="/kidney" target="_blank" style="color:black; text-decoration:none">
+      <div class="card-header">KIDNEY REPORTS</div>
+      <div class="text-white bg-info mb-3">
+        
+        <div class="card-body">
+          <p class="card-text">This card will redirect you to uplaod your kidney test reports.</p>
+        </div>
+      </div>
+    </a>
+    <a class="card" href="/eye" target="_blank" style="color:black; text-decoration:none">
+      <div class="card-header">EYE TESTS</div>
+      <div class="text-white bg-info mb-3">
+        
+        <div class="card-body">
+          <p class="card-text">This card will redirect you to view/access your eye test reports.</p>
+        </div>
+      </div>
+    </a>
+    <a class="card" href="/thyroid" target="_blank" style="color:black; text-decoration:none">
+      <div class="card-header" >THYROID REPORTS</div>
+      <div class="text-white bg-info mb-3">
+       
+        <div class="card-body">
+          <p class="card-text">This card will have you to view your test reports related to thyroid .</p>
+        </div>
+      </div>
+    </a>
+    
+  </div>
+  <br>
+  <br>
+  
+</ul>
+<!-- <form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div align="center">
+    <button type="submit" class="btn btn-primary">Swathi is the best!</button>
+  </div>
+</form> -->
+
+{% endblock %}
+
+
